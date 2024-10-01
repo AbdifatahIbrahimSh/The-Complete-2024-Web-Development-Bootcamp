@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>   
+<body>
+    <div class="container">
+        <% if (locals.name) { %>
+            <h1> <%= name %> </h1>
+        <% } else { %>
+            <h1>Welcome to the Band Generator</h1>
+        <% } %>
+        <form action="/submit" method="post">
+            <input type="submit" value="Generate Name" class="btn btn-secondary">
+        </form>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

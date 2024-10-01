@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Letters</title>
+</head>
+<body>
+    <%# Use locals.members of the embeded objects to test if they are exits or not %>
+    <% if (locals.firstname && locals.lastname) { %>
+        <h1>There is <%= firstname.length + lastname.length %> characters in your name. ⬇</h1>
+    <% } else { %>
+        <h1>Enter your name below ⬇</h1>
+    <% } %>
+     
+    <form action="/checkletters" method="POST">
+        <label for="firstname"> FirstName: </label>
+        <input type="text" id="firstname" name="firstname">
+        <label for="lastname"> FirstName: </label>
+        <input type="text" id="lastname" name="lastname">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

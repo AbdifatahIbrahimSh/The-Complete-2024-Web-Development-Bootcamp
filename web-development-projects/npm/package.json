@@ -1,0 +1,14 @@
+{
+  "name": "npm-learning",
+  "version": "1.0.0",
+  "description": "I going to learn NPM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdifatah Ibrahim",
+  "license": "MIT",
+  "dependencies": {
+    "sillyname": "^0.1.0"
+  }
+}

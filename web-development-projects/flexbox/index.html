@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layouts</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: blue;
+            gap: 1.5rem;
+            justify-content: space;
+        }
+
+        .container > * {
+            color: white;
+            padding: 10px;
+            border: 5px solid rgb(233, 129, 10);
+        }
+        .countries {
+            flex: 1;
+        }
+
+        .first {
+            flex: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="countries">East African Countries</div>
+        <div class="first">Somaliland</div>
+        <div class="second">Kenya</div>
+        <div class="third">Somalia</div>
+        <div class="fourth">Ethopia</div>
+    </div>
+</body>
+</html>

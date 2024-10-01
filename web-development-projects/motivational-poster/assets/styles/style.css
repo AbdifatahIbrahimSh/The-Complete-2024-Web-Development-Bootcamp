@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    
+    
+}
+
+.motivational-poster {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 80px;
+   
+   
+    
+    
+}
+.motivational-img {
+    width: 100%;
+    border: 5px solid rgb(120, 183, 208);
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    color: #227B94;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: ubuntu;
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 220, 127);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+      
+}

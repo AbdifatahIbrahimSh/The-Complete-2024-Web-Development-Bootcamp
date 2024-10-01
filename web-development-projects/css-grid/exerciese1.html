@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(200px, auto));
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            height: 100vh;
+            justify-content: center;
+            border: 5px solid yellow;
+            
+        }
+        .grid-item-1 {
+            grid-row: span 3;
+            background-color: green;
+        }
+        .grid-item-2 {
+            background-color: green;
+            grid-column: span 2;
+        }
+        .grid-item-4, .grid-item-7, .grid-item-10 {
+            background-color: red;
+        }
+        .grid-item-8 {
+            background-color: green;
+            grid-row: span 2;
+        }
+        .grid-item-6, .grid-item-11 {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item grid-item-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        <div class="grid-item grid-item-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        
+        <div class="grid-item grid-item-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obLorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.caecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+       
+        <div class="grid-item grid-item-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        <div class="grid-item grid-item-7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        <div class="grid-item grid-item-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit aLorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus. assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        
+        <div class="grid-item grid-item-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        <div class="grid-item grid-item-11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquam modi sed ratione alias odit a assumenda obcaecati eum corrupti! Vero similique a adipisci aut doloribus cumque amet omnis natus.</div>
+        
+    </div>
+    
+    
+</body>
+</html>
