@@ -1,0 +1,6 @@
+@media (min-width: 992px) { /* Large screens */
+    .col-xxl-custom {
+        flex: 0 0 29.17%;  /* 3.5/12 = 29.17% */
+        max-width: 29.17%;
+    }
+}
