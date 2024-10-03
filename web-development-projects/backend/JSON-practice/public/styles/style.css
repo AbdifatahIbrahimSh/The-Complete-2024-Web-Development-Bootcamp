@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 47vh;
+    align-items: flex-end;
+}
+.btn {
+    padding: 5px 15px;
+}
+
+
+.table {
+    width: 60%;
+}
+.second {
+    display: flex;
+    justify-content: center;
+    height: 47vh;
+    align-items: flex-start;
+}
+footer {
+    display: flex;
+    padding-left: 1rem;
+}

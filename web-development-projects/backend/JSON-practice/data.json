@@ -1,0 +1,15 @@
+{
+    "students":
+    {
+        "names":["Ahmed","Mohamed","Nour"],
+        "addresses":["Xeroawr","Jigjiga yar","150-ka"],
+        "grades":[100,90,80]
+    },
+    "teachers":
+    {
+        "names":["Abdiqani","Abdifatah","Abdirizak"],
+        "addresses":["Xeroawr","Jigjiga yar","150-ka"],
+        "grades":[800,500,400]
+    }
+    
+}

@@ -1,0 +1,16 @@
+{
+  "name": "json-practice",
+  "version": "1.0.0",
+  "description": "learning how json works ",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdifatah Ibrahim",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  }
+}
