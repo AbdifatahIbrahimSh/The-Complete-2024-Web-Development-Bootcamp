@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 5rem; 
+}
+.card {
+    width: 20%;
+    height: 500px;
+    margin: 1rem 0;
+    background-image: url("../images/shutup.jpg");
+    background-size: cover;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card p {
+    color: rgb(226, 5, 5);
+    font-family: ubuntu;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.7rem;
+}
+
+.user {
+    font-size: 1.5rem;
+}
+.secret {
+    opacity: 0;
+}
+
+.card:hover .secret {
+    opacity: 1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00f5);
+    background-size: 400% 400%;  /* Creates larger gradient to animate */
+    z-index: -1;
+    border-radius: 12px;  /* Same as the card’s border-radius */
+    padding: 10px;
+    transition: all 0.3s ease;  /* Smooth transition */
+    opacity: 0;  /* Hidden by default */
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),  /* Soft white glow */
+                0 0 40px rgba(255, 0, 0, 0.7),    /* Red glow */
+                0 0 60px rgba(255, 0, 0, 0.5);    /* Larger red glow */
+}
+
+/* Hover effect to show gradient border */
+.card:hover::before {
+    opacity: 1;  /* Make the gradient border visible */
+    animation: gradientAnimation 3s linear infinite;  /* Start the animation */
+}
+
+/* Card content styling */
+.card-content {
+    position: relative;
+    z-index: 1;  /* Ensure content stays above the gradient border */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
