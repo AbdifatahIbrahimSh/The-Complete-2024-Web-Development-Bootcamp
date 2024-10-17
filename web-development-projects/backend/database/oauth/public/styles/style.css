@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(241, 238, 238);
+}
+
+.bi {
+    transform: rotate(135deg); /* Rotates the icon by 45 degrees */
+    font-weight: 900;
+    stroke-width: 2; 
+}
+
+button.home {
+    width: 7rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+form {
+    width: 60%;
+}
+
+.register-login {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+form > * {
+    margin-bottom: 0.7rem;
+}
+
+.secret {
+    background-color: black;
+    padding: 0.5rem;
+    color: white;
+    
+}
+.btn-primary {
+    background-color: white; 
+    border: 0;
+    color: black;            
+}
+
+.btn-primary:hover {
+    background-color: black; /* Dark gray background */
+    color: white;  
+}
+
+.btn-secondary{
+    background-color: black; 
+    color: white  
+}
+.btn-secondary:hover {
+    background-color: white; /* Slightly darker on hover */
+    border: 0;
+    color: black  /* Slightly darker border on hover */
+}
+
+.container-login {
+    margin-top: 2rem;
+}
