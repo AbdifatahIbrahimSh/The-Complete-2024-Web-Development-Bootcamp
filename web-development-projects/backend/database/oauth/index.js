@@ -31,8 +31,6 @@ app.use(session({
     saveUninitialized: false
 }))
 
-
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -117,11 +115,17 @@ app.get("/auth/google/secrets", passport.authenticate("google", { failureRedirec
     res.render("secrets");
 })
 
-app.get("/secrets", (req, res) => {
-    if (req.isAuthenticated()) 
-        res.render("secrets");
-    else
-        res.redirect("/login");
+app.get("/secrets", async(req, res) => {
+    const client = await db.connect();
+    try {
+        const result = await client.query("SELECT secret FROM secrets");
+        const secrets = result.rows;
+        res.render("secrets", { secrets: secrets})
+    } catch (error) {
+        console.log(error);
+    } finally {
+        client.release();
+    }
 })
 
 app.get("/register", (req, res) => {
@@ -153,6 +157,60 @@ app.post("/register", async (req, res) => {
     } finally {
         client.release();
     }
+})
+
+app.get("/submit", (req, res) => {
+    if (req.isAuthenticated()) 
+        res.render("submit");
+    else 
+        res.redirect("/login");
+})
+
+app.post("/submit", async (req, res) => {
+    const { secret } = req.body;
+    const userId = req.user.id;
+    console.log(userId);
+    const client = await db.connect();
+    try {
+        if (userId) {
+            await client.query("INSERT INTO secrets (secret, user_id) VALUES ($1, $2)", [secret, userId]);
+            res.redirect("/secrets");
+        }
+    } catch(error) {
+        console.log(error);
+    } finally {
+        client.release();
+    }
+})
+
+app.get("/mysecrets", async (req, res) => {
+    if (req.isAuthenticated()) {
+        const client = await db.connect();
+        const userId = req.user.id;
+        try {
+            const result = await client.query("SELECT secret FROM secrets WHERE user_id = $1", [userId]);
+            const secrets = result.rows;
+            res.render("secrets", { secrets: secrets});
+        } catch (error) {
+            console.log(error);
+        } finally {
+            client.release();
+        }
+    }
+     else {
+        res.redirect("/login");
+     }
+})
+
+app.get("/all", (req, res) => {
+    res.redirect("/secrets");
+})
+
+app.get("/logout", (req, res) => {
+    req.logout(err => {
+        if (err) next(err);
+        return res.redirect("/login");
+    })
 })
 
 app.listen(port, () => {

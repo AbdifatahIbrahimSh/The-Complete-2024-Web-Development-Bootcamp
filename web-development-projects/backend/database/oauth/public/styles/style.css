@@ -58,3 +58,9 @@ form > * {
 .container-login {
     margin-top: 2rem;
 }
+
+.submited {
+    background-color: black;
+    color: white;
+    padding: 0.4rem;
+}

@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container my-5">
+    <div class="p-5 text-center rounded-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+      </svg>
+      <h1 class="text-body-emphasis">Secrets</h1>
+      <p class="col-lg-8 mx-auto fs-5 submited">
+        Don't keep your secrets, share them anonymously.
+      </p>
+     <form action="/submit" method="post" class="col-lg-8 mx-auto fs-5 mb-3">
+        <div >
+            <input type="text" name="secret" class="form-control text-center" autofocus placeholder="What is your secret?">
+          </div>
+          <div class="d-inline-flex gap-2 mb-5">
+            <button type="submit" class="home d-inline-flex align-items-center btn btn-primary btn-lg px-4" style="border-radius: 4px">
+             Submit
+            </button>
+          </div>
+     </form>
+    </div>
+  </div>
+
+<%- include('partials/footer.ejs') %>
