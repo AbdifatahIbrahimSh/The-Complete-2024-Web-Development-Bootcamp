@@ -1,0 +1,10 @@
+body {
+  font-family: ubuntu;
+  display: flex;
+  justify-content: center;
+  height: 97vh;
+  font-size: 2rem;
+  background-color: rgb(28, 46, 28);
+  color: white;
+  text-transform: uppercase;
+}
