@@ -6,6 +6,9 @@ import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
+import axios from "axios";
+import { useEffect } from 'react';
+
 
 export default function App() {
   const [list, setList] = useState([]);
@@ -14,6 +17,20 @@ export default function App() {
     content: ""
   })
   const [isExpanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    async function getList() {
+      try {
+        const result = await axios.get("http://localhost:4000/posts");
+        const posts = result.data;
+        setList(posts);  
+      } catch(error) {
+        console.log(error);
+      }
+    }
+    getList();
+    
+  }, []); 
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -51,6 +68,7 @@ export default function App() {
 
   return (
     <>
+    
      <Header />
      <div> 
       <div className="big-container"> 
@@ -64,7 +82,7 @@ export default function App() {
         </div>
       <div className="container">
         {list.map((note, index) => (
-          <Note title={note.title} content={note.content} onDelete={() => handleDelete(index)} />
+          <Note key={index} title={note.title} content={note.content} onDelete={() => handleDelete(index)} />
         ))}
       </div>
       </div>

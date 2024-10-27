@@ -112,3 +112,12 @@ body, #root {
     margin-bottom: -0.5rem;
     text-align: justify;
 }
+
+.star-rating {
+    display: flex;
+    gap: 1rem;
+}
+
+.output {
+    margin-left: 4rem;
+}
